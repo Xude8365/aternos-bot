@@ -25,6 +25,10 @@ const client = new Client({
 client.once('ready', () => {
   console.log(`✅ Connecté en tant que ${client.user.tag}`);
   updateStatus(); // Mise à jour immédiate au démarrage
+  console.log(!data)
+  console.log(data.players.max)
+  console.log(!data.players)
+  console.log(!data.online)
 });
 
 // === 📢 Commande !status dans le chat ===
