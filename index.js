@@ -25,10 +25,6 @@ const client = new Client({
 client.once('ready', () => {
   console.log(`✅ Connecté en tant que ${client.user.tag}`);
   updateStatus(); // Mise à jour immédiate au démarrage
-  console.log(!data)
-  console.log(data.players.max)
-  console.log(!data.players)
-  console.log(!data.online)
 });
 
 // === 📢 Commande !status dans le chat ===
@@ -45,6 +41,10 @@ async function getServerData() {
     const response = await fetch(`https://api.mcsrvstat.us/2/${SERVER_ADDRESS}`);
     const data = await response.json();
     return data;
+    console.log(!data)
+    console.log(data.players.max)
+    console.log(!data.players)
+    console.log(!data.online)
   } catch (error) {
     console.error('Erreur de connexion à l’API :', error);
     return null;
